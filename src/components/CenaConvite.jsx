@@ -10,7 +10,7 @@ export function CenaConvite({ onAvancar }) {
       transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <span className="subtitulo-topo">Cultura Brasileira à luz da Cultura Chinesa</span>
-      <h1 className="titulo-convite">Vamos tomar um cafezinho?</h1>
+      <h1 className="titulo-convite">Vamos tomar um cafézinho?</h1>
 
       <motion.button
         onClick={onAvancar}
