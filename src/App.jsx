@@ -1,44 +1,34 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "motion/react";
+import { doc, onSnapshot, setDoc, increment } from "firebase/firestore";
+import { db } from "./firebase";
 import { CenaConvite } from "./components/CenaConvite";
 import { CenaPreparo } from "./components/CenaPreparo";
 import { CenaMesa } from "./components/CenaMesa";
 
 export default function App() {
   const [etapa, setEtapa] = useState("convite");
-  const [totalPausas, setTotalPausas] = useState(() => {
-    return Number(localStorage.getItem("pausa_cafe_total") || 0);
-  });
+  const [totalPausas, setTotalPausas] = useState(0);
 
+  // Escuta o total acumulado no banco em tempo real
   useEffect(() => {
-    fetch("https://api.counterapi.dev/v1/pausa-para-o-cafe-smd/pausas")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data && typeof data.count === "number") {
-          setTotalPausas(data.count);
-          localStorage.setItem("pausa_cafe_total", String(data.count));
-        }
-      })
-      .catch(() => {});
+    const docRef = doc(db, "ritual", "contador");
+    const unsubscribe = onSnapshot(docRef, (snapshot) => {
+      if (snapshot.exists()) {
+        setTotalPausas(snapshot.data().xicaras || 0);
+      }
+    });
+    return () => unsubscribe();
   }, []);
 
+  // Soma +1 de forma atômica no Firestore quando a pessoa entra na salinha
   const registrarPausaColetiva = async () => {
-    const proximoLocal = totalPausas + 1;
-    setTotalPausas(proximoLocal);
-    localStorage.setItem("pausa_cafe_total", String(proximoLocal));
     setEtapa("mesa");
-
     try {
-      const res = await fetch(
-        "https://api.counterapi.dev/v1/pausa-para-o-cafe-smd/pausas/up"
-      );
-      const data = await res.json();
-      if (data && typeof data.count === "number") {
-        setTotalPausas(data.count);
-        localStorage.setItem("pausa_cafe_total", String(data.count));
-      }
-    } catch {
-      // Mantém o valor local se a API não responder
+      const docRef = doc(db, "ritual", "contador");
+      await setDoc(docRef, { xicaras: increment(1) }, { merge: true });
+    } catch (erro) {
+      console.error("Erro ao registrar pausa:", erro);
     }
   };
 
