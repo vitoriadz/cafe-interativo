@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #171311;
+  color: #f5ebe0;
+  font-family: "Georgia", serif;
+  overflow: hidden;
+}
+
+.palco {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.cena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.cena-larga {
+  max-width: 680px;
+}
+
+.subtitulo-topo {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #bfa995;
+}
+
+.titulo-convite {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.instrucao-sutil {
+  font-size: 0.95rem;
+  color: #bfa995;
+  font-style: italic;
+}
+
+.seletor-modo {
+  display: flex;
+  gap: 0.6rem;
+  background: #231e1b;
+  padding: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid #4a3f37;
+}
+
+.aba-modo {
+  background: transparent;
+  color: #bfa995;
+  border: none;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aba-modo.ativa {
+  background: #4e3b31;
+  color: #f5ebe0;
+}
+
+.botao-seta {
+  background: transparent;
+  border: none;
+  color: #e6d5c3;
+  cursor: pointer;
+  padding: 0.75rem;
+}
+
+.botao-avancar,
+.botao-fechar {
+  background-color: #2e2622;
+  color: #f5ebe0;
+  border: 1px solid #6b5649;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botao-avancar:hover,
+.botao-fechar:hover {
+  background-color: #3f342e;
+}
+
+.ilustracao-svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 10, 9, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 10;
+}
+
+.cartao-bilhete {
+  background: #f5ebe0;
+  color: #2a211b;
+  padding: 2rem;
+  border-radius: 6px;
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cartao-conceito {
+  background: #231e1b;
+  color: #f5ebe0;
+  border: 1px solid #d9a066;
+  padding: 2.2rem;
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.etiqueta {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.7;
+}
+
+.subtitulo-modal {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #d9a066;
+}
+
+.texto-modal {
+  line-height: 1.65;
+  font-size: 0.98rem;
+  color: #e6d5c3;
+}
+
+.texto-bilhete {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.barra-navegacao-topo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 520px;
+}
+
+.botao-voltar-topo {
+  background: transparent;
+  border: none;
+  color: #bfa995;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.35rem 0.6rem;
+  transition: color 0.3s ease;
+}
+
+.botao-voltar-topo:hover {
+  color: #f5ebe0;
+}
+
+.contador-simbolico {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background-color: rgba(46, 38, 34, 0.7);
+  border: 1px solid #4a3f37;
+  font-size: 0.85rem;
+  color: #d9c5b2;
+  letter-spacing: 0.02em;
+}
+
+.ponto-ritual {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #d9a066;
+  box-shadow: 0 0 8px #d9a066;
+}
