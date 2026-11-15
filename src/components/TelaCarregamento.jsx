@@ -29,7 +29,6 @@ export function TelaCarregamento({ mensagem = "Aquecendo a água..." }) {
               ease: "easeInOut"
             }}
           >
-            {/* Corpo oval do grão de café */}
             <ellipse
               cx="14"
               cy="18"
@@ -39,7 +38,7 @@ export function TelaCarregamento({ mensagem = "Aquecendo a água..." }) {
               stroke="#E6D5C3"
               strokeWidth="1.8"
             />
-            {/* Fenda central curva do grão */}
+   
             <path
               d="M14 6 Q10 18 14 30"
               fill="none"

@@ -9,7 +9,7 @@ export function CenaConvite({ onAvancar }) {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
     >
-      <span className="subtitulo-topo">Cultura Brasileira à luz da Cultura Chinesa</span>
+      {/* <span className="subtitulo-topo">Cultura Brasileira à luz da Cultura Chinesa</span> */}
       <h1 className="titulo-convite">Vamos tomar um cafézinho?</h1>
 
       <motion.button

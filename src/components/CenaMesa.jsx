@@ -25,7 +25,7 @@ export function CenaMesa({ totalPausas, onVoltar, onReiniciar }) {
 </div>
 
       <p className="instrucao-sutil">
-        Toque nos quadros na parede ou na fatia de bolo sobre a mesa
+        Vamos curtir nossa pausa? Toque nos quadros na parede ou na fatia de bolo sobre a mesa!
       </p>
 
       <svg width="640" height="340" viewBox="0 0 640 340" className="ilustracao-svg">
@@ -49,7 +49,6 @@ export function CenaMesa({ totalPausas, onVoltar, onReiniciar }) {
           </linearGradient>
         </defs>
 
-        {/* Parede interna da sala */}
         <rect
           x="18"
           y="16"
@@ -61,15 +60,12 @@ export function CenaMesa({ totalPausas, onVoltar, onReiniciar }) {
           strokeWidth="2"
         />
 
-        {/* Sanca no topo da parede */}
         <line x1="28" y1="34" x2="612" y2="34" stroke="#3D332D" strokeWidth="2" />
 
-        {/* Lambris (meia-parede de madeira) */}
         <rect x="20" y="216" width="600" height="94" fill="#221B17" />
         <line x1="20" y1="216" x2="620" y2="216" stroke="#4A3F37" strokeWidth="2" />
         <line x1="20" y1="222" x2="620" y2="222" stroke="#332A24" strokeWidth="1" />
 
-        {/* ==================== JANELINHA ESQUERDA ==================== */}
         <g>
           <polygon points="44,185 116,185 136,295 28,295" fill="#D9A066" opacity="0.06" />
           <rect x="44" y="68" width="72" height="114" rx="4" fill="url(#grad-ceu-janela)" />
@@ -89,7 +85,6 @@ export function CenaMesa({ totalPausas, onVoltar, onReiniciar }) {
           <line x1="34" y1="62" x2="126" y2="62" stroke="#A68A73" strokeWidth="2.5" strokeLinecap="round" />
         </g>
 
-        {/* ==================== JANELINHA DIREITA ==================== */}
         <g>
           <polygon points="524,185 596,185 612,295 504,295" fill="#D9A066" opacity="0.06" />
           <rect x="524" y="68" width="72" height="114" rx="4" fill="url(#grad-ceu-janela)" />
@@ -109,7 +104,6 @@ export function CenaMesa({ totalPausas, onVoltar, onReiniciar }) {
           <line x1="514" y1="62" x2="606" y2="62" stroke="#A68A73" strokeWidth="2.5" strokeLinecap="round" />
         </g>
 
-        {/* ==================== QUADRO 1: Rito e Presença - Li (禮) ==================== */}
         <motion.g
           onClick={() => setQuadroAberto(QUADROS_CONCEITOS[0])}
           style={{ cursor: "pointer" }}
@@ -131,7 +125,6 @@ export function CenaMesa({ totalPausas, onVoltar, onReiniciar }) {
           </text>
         </motion.g>
 
-        {/* ==================== QUADRO 2: A Pausa Afetiva ==================== */}
         <motion.g
           onClick={() => setQuadroAberto(QUADROS_CONCEITOS[1])}
           style={{ cursor: "pointer" }}
@@ -158,7 +151,6 @@ export function CenaMesa({ totalPausas, onVoltar, onReiniciar }) {
           </text>
         </motion.g>
 
-        {/* ==================== QUADRO 3: O Fazer Tecnológico Consciente ==================== */}
         <motion.g
           onClick={() => setQuadroAberto(QUADROS_CONCEITOS[2])}
           style={{ cursor: "pointer" }}
@@ -184,7 +176,6 @@ x="423"
           </text>
         </motion.g>
 
-        {/* ==================== MESA DE MADEIRA DA SALA (SEM PÉS) ==================== */}
         <rect
           x="12"
           y="293"
@@ -198,10 +189,8 @@ x="423"
         <line x1="55" y1="306" x2="250" y2="306" stroke="#8C6244" strokeWidth="1.2" opacity="0.5" />
         <line x1="360" y1="306" x2="575" y2="306" stroke="#8C6244" strokeWidth="1.2" opacity="0.5" />
 
-        {/* Caminho de mesa central */}
         <path d="M175 293 H465 L476 319 H164 Z" fill="#F5EBE0" opacity="0.09" />
 
-        {/* ==================== XÍCARA DE CAFÉ DETALHADA ==================== */}
         <g>
           <ellipse cx="242" cy="290" rx="42" ry="5.5" fill="#C8B6A6" stroke="#E6D5C3" strokeWidth="1.2" />
           <ellipse cx="242" cy="289" rx="26" ry="2.5" fill="#9E8B7B" />
@@ -223,7 +212,6 @@ x="423"
           <ellipse cx="242" cy="251" rx="18" ry="1.8" fill="#C89F7D" opacity="0.7" />
           <path d="M222 256 V276" stroke="#FFFDF9" strokeWidth="1.4" strokeLinecap="round" opacity="0.4" />
 
-          {/* Curvinhas de fumaça */}
           <motion.path
             d="M234 242 C228 233 240 225 234 215 C230 208 238 200 234 194"
             fill="none"
@@ -244,7 +232,7 @@ x="423"
           />
         </g>
 
-        {/* ==================== FATIA DE BOLO CASEIRO COM BILHETE ==================== */}
+      
         <motion.g
           onClick={abrirBilheteBolo}
           style={{ cursor: "pointer" }}
@@ -262,15 +250,13 @@ x="423"
             strokeLinejoin="round"
           />
 
-          {/* Camada de recheio */}
+
           <path d="M386 269 L432 269 L432 264 L395 264 Z" fill="#6F4E37" />
 
-          {/* Textura fofinha da massa */}
           <circle cx="406" cy="278" r="1.3" fill="#8C5828" opacity="0.55" />
           <circle cx="418" cy="276" r="1.1" fill="#8C5828" opacity="0.55" />
           <circle cx="416" cy="257" r="1.2" fill="#8C5828" opacity="0.55" />
 
-          {/* Cobertura no topo */}
           <path
             d="M355 286 L432 244 L426 237 L351 280 Z"
             fill="#5C3A21"
@@ -286,7 +272,7 @@ x="423"
             strokeLinecap="round"
           />
 
-          {/* Bilhete dobrado aparecendo no bolo */}
+    
           <motion.g
             animate={{ rotate: [-14, -8, -14], y: [0, -1.5, 0] }}
             transition={{ repeat: Infinity, duration: 3.2, ease: "easeInOut" }}
@@ -306,7 +292,8 @@ x="423"
         </motion.g>
       </svg>
 
-      {/* Contador simbólico de pausas compartilhadas */}
+
+      
       <motion.div
         className="contador-simbolico"
         initial={{ opacity: 0, y: 8 }}
@@ -321,7 +308,6 @@ x="423"
         </span>
       </motion.div>
 
-      {/* Modal do Bilhete Oculto no Bolo */}
       <AnimatePresence>
         {bilheteAberto && (
           <motion.div
@@ -349,7 +335,6 @@ x="423"
         )}
       </AnimatePresence>
 
-      {/* Modal dos Quadros Conceituais */}
       <AnimatePresence>
         {quadroAberto && (
           <motion.div
