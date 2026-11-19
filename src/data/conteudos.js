@@ -2,7 +2,29 @@ export const BILHETES_BOLO = [
   "Assim como o bilhete escondido no bolo junino, o sentido da pausa só se revela para quem se permite saborear o tempo.",
   "O gesto cotidiano feito com presença transforma um simples café em ritual de encontro.",
   "Que a doçura deste intervalo traga clareza para os próximos passos e calma para o pensamento.",
-  "Na partilha da mesa, o afeto se torna linguagem silenciosa de acolhimento."
+  "Na partilha da mesa, o afeto se torna linguagem silenciosa de acolhimento.",
+  "Os melhores planos costumam florescer justamente quando a gente decide desacelerar por alguns minutos.",
+  "Que o calor desta fatia aqueça também a sua coragem para realizar o que o coração anda pedindo.",
+  "A vida fica mais leve quando a gente aprende a celebrar as pequenas colheitas de cada dia.",
+  "Nem sempre é preciso ter todas as respostas agora; às vezes, basta aproveitar a boa companhia do momento.",
+  "O que você cultiva com paciência e carinho hoje será a alegria que você vai colher amanhã.",
+  "Que não falte motivo para sorrir, café fresco na mesa e gente querida por perto.",
+  "As surpresas mais bonitas chegam quando abrimos espaço para o novo sem pressa.",
+  "Assim como uma boa receita, os dias felizes pedem uma pitada de afeto e outra de gratidão.",
+  "Permita-se descansar sem culpa: a pausa também faz parte da caminhada.",
+  "Algo bom já está a caminho e vai encontrar você exatamente onde você precisa estar.",
+  "A gentileza que você espalha no dia a dia sempre encontra um jeito bonito de voltar para casa.",
+  "Que este pequeno momento de doçura renove suas energias para tudo o que ainda vem pela frente.",
+  "O sábio não apressa o rio; senta-se à margem, observa o fluxo e compreende que tudo chega no seu devido tempo.",
+  "Aquele que domina a pressa torna-se senhor do próprio destino.",
+  "Grandes caminhos começam com um passo sereno e uma mente em paz.",
+  "Não pergunte quando a colheita virá; cuide da terra hoje e o tempo responderá por si.",
+  "A harmonia da casa começa na quietude de quem sabe ouvir antes de falar.",
+  "Quem aprende a encontrar riqueza no simples jamais conhecerá a escassez.",
+  "A árvore mais firme não é a que resiste ao vento com rigidez, mas a que sabe inclinar-se e retornar ao centro.",
+  "O verdadeiro mestre não é aquele que acumula respostas, mas o que mantém o espírito aberto para aprender com cada encontro.",
+  "Quando o coração está em equilíbrio, até o silêncio ao redor da mesa se torna conversa boa.",
+  "Não temas avançar devagar; teme apenas permanecer parado onde já não há aprendizado."
 ];
 
 export const QUADROS_CONCEITOS = [
